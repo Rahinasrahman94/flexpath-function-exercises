@@ -20,7 +20,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_02();
+  exercise_08();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -106,8 +106,30 @@ function exercise_04() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code here";
+  let isValidEmail  = (result) =>
+  {
+     let count =0;
+    for(let i=0;i<result.length;i++)
+    {
+     if( result[i] === '@')
+      {
+      count ++;
+    }
+    }
+    
+    if(count === 1)
+    {
+    let atIndex = result.indexOf("@");
+    let dotIndex = result.indexOf(".")
+    if(atIndex<dotIndex)
+    {
+  return true;
+   }
+  }
+return false;
+  }
 
+  console.log(isValidEmail("rahinasrahman94@gmail@.com"))
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -127,10 +149,16 @@ function exercise_05() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code here";
-
-  // CODE IN THE OPEN LINES ABOVE
+ function greet(name,message="hello")
+ {
+  return `${message} ${name}`;
+ }
+ console.log(greet("Rahina","Welcome"));
+ console.log(greet("Rahina"));
 }
+  // CODE IN THE OPEN LINES ABOVE
+
+//console.log(greet("Rahina"));
 
 function exercise_06() {
   /* 
@@ -153,6 +181,8 @@ function exercise_06() {
 
   showMessage();
   console.log(message);
+  //local
+  //global
 
   /*
 
@@ -181,9 +211,14 @@ function exercise_07() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code here";
-
-  // CODE IN THE OPEN LINES ABOVE
+ function incrementCounter ()
+ {
+  let counter = 0 ;
+  counter ++;
+  console.log(counter);
+ }
+incrementCounter();
+incrementCounter();
 }
 
 function exercise_08() {
@@ -200,7 +235,15 @@ function exercise_08() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code here";
+  function makeMultiplier(multiplier)
+  {
+    return function(number)
+    {
+      return multiplier * number;
+    }
+  }
+  const newFunction = makeMultiplier(5);
+console.log(newFunction(5));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -226,6 +269,19 @@ function exercise_09() {
 
   */
   // CODE IN THE OPEN LINES BELOW
+  function factorial(n)
+  {
+    let result = 0 ;
+    if(n < 0)
+    {
+      console.log("Bad Number");
+    }
+    for(let i=0;i<n;i++)
+    {
+    
+        let result =+ i;
+      }
+    }
 
   const placeholder = "Delete this line and code here";
 
