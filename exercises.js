@@ -20,7 +20,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_08();
+  exercise_01();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -276,12 +276,12 @@ function exercise_09() {
     {
       console.log("Bad Number");
     }
-    for(let i=0;i<n;i++)
-    {
-    
-        let result =+ i;
-      }
-    }
+   if(n === 0 || n === 1)
+{
+  return 1;
+}    
+return n * factorial(n-1);
+  }
 
   const placeholder = "Delete this line and code here";
 
@@ -301,7 +301,8 @@ function exercise_10() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code here";
+  fruits.forEach((fruit) => console.log(fruit));
+
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -345,7 +346,7 @@ function exercise_12() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code here";
+  numbers.filter((number) => number % 2 === 0)
 
   // CODE IN THE OPEN LINES ABOVE
 }
